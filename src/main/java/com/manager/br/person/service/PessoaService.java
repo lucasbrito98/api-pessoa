@@ -1,41 +1,21 @@
 package com.manager.br.person.service;
 
+import com.manager.br.person.dtoEndereco.PessoaDTO;
 import com.manager.br.person.entity.Pessoa;
-import com.manager.br.person.repository.PessoaRepository;
-import jakarta.transaction.Transactional;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
-@RequiredArgsConstructor
-public class PessoaService {
 
-    private PessoaRepository pessoaRepository;
+public interface PessoaService {
 
-    @Transactional
-    public Pessoa salvar(Pessoa pessoa) {
+    Pessoa salvar(PessoaDTO pessoa);
 
-        pessoaRepository.save(pessoa);
-        pessoa.getEnderecoList().stream()
-                .forEach(endereco -> endereco.setPessoa(pessoa));
-        return pessoa;
-    }
+    List<PessoaDTO> listaPessoa();
 
-    public List<Pessoa> listaPessoa() {
-        return pessoaRepository.findAll();
-    }
+    PessoaDTO buscarPorId(Long id);
 
-    public Optional<Pessoa> buscarPorId(Long id) {
-        return pessoaRepository.findById(id);
-    }
+    void removerPorId(Long id);
 
-    public void removerPorId(Long id) {
-        pessoaRepository.deleteById(id);
-
-    }
-
+    void atualizarPessoa(Long id, PessoaDTO pessoa);
 }
-

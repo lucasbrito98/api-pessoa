@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class PersonApplication {
+public class PersonApplication  {
 	@Bean
 	public ModelMapper modelMapper(){
 		ModelMapper modelMapper = new ModelMapper();

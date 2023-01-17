@@ -43,6 +43,7 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -53,8 +54,21 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
 
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
+		<dependency>
+			<groupId>com.sun.istack</groupId>
+			<artifactId>istack-commons-runtime</artifactId>
+			<version>4.1.1</version>
+		</dependency>
+
+	</dependencies>
 	<build>
 		<plugins>
 			<plugin>

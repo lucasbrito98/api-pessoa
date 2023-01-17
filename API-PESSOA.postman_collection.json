@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "4220d0cd-eddc-4e5d-82a7-0c069dbe9d70",
+		"name": "API-PESSOA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/pessoa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \" Geovana Lima \",\r\n    \"dataNascimento\": \"06/12/2424\",\r\n    \"enderecoList\": [\r\n        {\r\n            \"logradouro\": \"Rua Poraque\",\r\n            \"numero\": \"17\",\r\n            \"principal\": true,\r\n            \"cidade\": \"Boa Vista\",\r\n            \"cep\":\"6931488\"\r\n            \r\n        },\r\n        {\r\n             \"logradouro\":\"rua alarquina\",      \r\n            \"cidade\":\"Rorainopolis\",\r\n            \"numero\": \"18\",\r\n            \"cep\": \"695314\"\r\n            \r\n        }     \r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pessoa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/pessoa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pessoa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoa"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
